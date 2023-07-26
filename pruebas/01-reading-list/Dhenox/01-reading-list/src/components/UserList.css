@@ -1,0 +1,81 @@
+.user-list-div {
+    position: relative;
+    background-color: rgb(37, 37, 82);
+    height: 100%;
+    width: 1000px;
+    padding: 1%;
+}
+
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 20px;
+    row-gap: 40px;
+}
+
+.user-book-div {
+    height: fit-content;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.user-book-div * {
+    transition: all 0.5s;
+}
+
+.user-book-div:hover .user-book-info {
+    opacity: 100%;
+}
+
+.user-book-div-darker {
+    background-color: black;
+}
+
+.user-book-div:hover .user-book-cover{
+    opacity: 22%;
+}
+
+.user-book-cover {
+    box-sizing: border-box;
+    max-width: 200px;
+    height: auto;
+    vertical-align: top;
+}
+
+.user-book-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    opacity: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.user-book-info * {
+    margin: 0;
+}
+
+.user-book-info #other-books {
+    white-space: nowrap;
+}
+
+.user-book-div:hover .user-book-info #other-books {
+    animation: scrollLeft 3s linear infinite;
+    animation-delay: 1s;
+    white-space: nowrap;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
